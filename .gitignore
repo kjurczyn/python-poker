@@ -1,0 +1,6 @@
+.vscode/
+settings.json
+*__pycache__/
+.pytest_cache
+Poker/__pycache__/*
+Tests/__pycache__/*

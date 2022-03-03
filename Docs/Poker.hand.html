@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module hand</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>hand</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/Poker/21z-pipr-poker/Poker/hand.py">/home/Poker/21z-pipr-poker/Poker/hand.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-checkForFlush"><strong>checkForFlush</strong></a>(cards: List[Poker.card.Card]) -&gt; tuple</dt></dl>
+ <dl><dt><a name="-checkForFour"><strong>checkForFour</strong></a>(cards: List[Poker.card.Card]) -&gt; tuple</dt></dl>
+ <dl><dt><a name="-checkForFullHouse"><strong>checkForFullHouse</strong></a>(cards: List[Poker.card.Card], pairs: List, three: tuple) -&gt; tuple</dt></dl>
+ <dl><dt><a name="-checkForPairs"><strong>checkForPairs</strong></a>(cards: List[Poker.card.Card], three: tuple) -&gt; List[Poker.card.Card]</dt></dl>
+ <dl><dt><a name="-checkForRoyalAndStraightFlush"><strong>checkForRoyalAndStraightFlush</strong></a>(cards: List[Poker.card.Card])</dt></dl>
+ <dl><dt><a name="-checkForStraight"><strong>checkForStraight</strong></a>(cards: List[Poker.card.Card]) -&gt; tuple</dt></dl>
+ <dl><dt><a name="-checkForThree"><strong>checkForThree</strong></a>(cards: List[Poker.card.Card]) -&gt; tuple</dt></dl>
+ <dl><dt><a name="-determineHandType"><strong>determineHandType</strong></a>(cards: List[Poker.card.Card]) -&gt; Tuple[int, Union[tuple, int]]</dt><dd><tt>Takes&nbsp;in&nbsp;a&nbsp;list&nbsp;of&nbsp;at&nbsp;least&nbsp;5&nbsp;cards&nbsp;and&nbsp;returns&nbsp;the&nbsp;hand&nbsp;type&nbsp;and&nbsp;value&nbsp;of&nbsp;high&nbsp;card/s&nbsp;of&nbsp;the&nbsp;hand.<br>
+Hand&nbsp;types:<br>
+&nbsp;&nbsp;&nbsp;1:&nbsp;Royal&nbsp;Flush<br>
+&nbsp;&nbsp;&nbsp;2:&nbsp;Straight&nbsp;Flush<br>
+&nbsp;&nbsp;&nbsp;3:&nbsp;Four&nbsp;of&nbsp;a&nbsp;Kind<br>
+&nbsp;&nbsp;&nbsp;4:&nbsp;Full&nbsp;House<br>
+&nbsp;&nbsp;&nbsp;5:&nbsp;Flush<br>
+&nbsp;&nbsp;&nbsp;6:&nbsp;Straight<br>
+&nbsp;&nbsp;&nbsp;7:&nbsp;Three&nbsp;of&nbsp;a&nbsp;Kind<br>
+&nbsp;&nbsp;&nbsp;8:&nbsp;Two&nbsp;Pair<br>
+&nbsp;&nbsp;&nbsp;9:&nbsp;One&nbsp;Pair<br>
+&nbsp;&nbsp;&nbsp;10:&nbsp;High&nbsp;Card</tt></dd></dl>
+ <dl><dt><a name="-isInRow"><strong>isInRow</strong></a>(cards: List[Poker.card.Card]) -&gt; bool</dt><dd><tt>Takes&nbsp;a&nbsp;list&nbsp;of&nbsp;cards&nbsp;sorted&nbsp;in&nbsp;descending&nbsp;order&nbsp;and&nbsp;checks&nbsp;wether&nbsp;they're&nbsp;in&nbsp;row.</tt></dd></dl>
+ <dl><dt><a name="-isSameSuit"><strong>isSameSuit</strong></a>(cards: List[Poker.card.Card]) -&gt; bool</dt><dd><tt>Takes&nbsp;a&nbsp;list&nbsp;of&nbsp;cards&nbsp;and&nbsp;checks&nbsp;whether&nbsp;they're&nbsp;of&nbsp;the&nbsp;same&nbsp;suit.</tt></dd></dl>
+ <dl><dt><a name="-isSameValue"><strong>isSameValue</strong></a>(cards: List[Poker.card.Card]) -&gt; bool</dt><dd><tt>Takes&nbsp;a&nbsp;list&nbsp;of&nbsp;cards&nbsp;and&nbsp;checks&nbsp;whether&nbsp;they're&nbsp;the&nbsp;same&nbsp;value.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>List</strong> = typing.List<br>
+<strong>Tuple</strong> = typing.Tuple<br>
+<strong>Union</strong> = typing.Union<br>
+<strong>hands</strong> = {1: 'Royal Flush', 2: 'Straight Flush', 3: 'Four of a Kind', 4: 'Full House', 5: 'Flush', 6: 'Straight', 7: 'Three of a Kind', 8: 'Two Pair', 9: 'One Pair', 10: 'High Card'}</td></tr></table>
+</body></html>

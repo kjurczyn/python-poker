@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module game</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>game</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/Poker/21z-pipr-poker/Poker/game.py">/home/Poker/21z-pipr-poker/Poker/game.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="game.html#Game">Game</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Game">class <strong>Game</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Game">Game</a>(players:&nbsp;List[Poker.player.Player])&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+Represents&nbsp;a&nbsp;game&nbsp;of&nbsp;Texas&nbsp;Hold'em&nbsp;Poker.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Game-__init__"><strong>__init__</strong></a>(self, players: List[Poker.player.Player]) -&gt; None</dt><dd><tt>Initializes&nbsp;a&nbsp;<a href="#Game">Game</a>&nbsp;<a href="builtins.html#object">object</a>&nbsp;from&nbsp;a&nbsp;list&nbsp;of&nbsp;Player&nbsp;objects.&nbsp;At&nbsp;least&nbsp;2&nbsp;players&nbsp;in&nbsp;list.</tt></dd></dl>
+
+<dl><dt><a name="Game-__str__"><strong>__str__</strong></a>(self) -&gt; str</dt><dd><tt>Return&nbsp;str(self).</tt></dd></dl>
+
+<dl><dt><a name="Game-bet"><strong>bet</strong></a>(self, player: Poker.player.Player, amount: int) -&gt; None</dt><dd><tt>Takes&nbsp;in&nbsp;a&nbsp;Player&nbsp;<a href="builtins.html#object">object</a>&nbsp;and&nbsp;an&nbsp;amount&nbsp;integer,&nbsp;and&nbsp;places&nbsp;a&nbsp;bet&nbsp;of&nbsp;that&nbsp;amount&nbsp;for&nbsp;the&nbsp;Player.<br>
+Creates&nbsp;side&nbsp;pot&nbsp;automaticall&nbsp;if&nbsp;necessary.</tt></dd></dl>
+
+<dl><dt><a name="Game-bettingRoundLoop"><strong>bettingRoundLoop</strong></a>(self, game_waiting_event: threading.Event, game_continue_event: threading.Event, current_player_queue: queue.Queue)</dt></dl>
+
+<dl><dt><a name="Game-dealNextCard"><strong>dealNextCard</strong></a>(self) -&gt; None</dt><dd><tt>Deals&nbsp;a&nbsp;new&nbsp;card&nbsp;onto&nbsp;the&nbsp;table</tt></dd></dl>
+
+<dl><dt><a name="Game-determinePlayerWithHighestKicker"><strong>determinePlayerWithHighestKicker</strong></a>(self, players_sorted: List[Poker.player.Player]) -&gt; Union[Poker.player.Player, List]</dt><dd><tt>Takes&nbsp;in&nbsp;a&nbsp;list&nbsp;of&nbsp;Player&nbsp;objects&nbsp;and&nbsp;returns&nbsp;a&nbsp;Player&nbsp;or&nbsp;list&nbsp;of&nbsp;Players&nbsp;with&nbsp;the&nbsp;highest&nbsp;kickers.</tt></dd></dl>
+
+<dl><dt><a name="Game-determineWinner"><strong>determineWinner</strong></a>(self, players: List[Poker.player.Player]) -&gt; Union[Poker.player.Player, List[Poker.player.Player]]</dt><dd><tt>Takes&nbsp;in&nbsp;a&nbsp;list&nbsp;of&nbsp;Player&nbsp;objects&nbsp;and&nbsp;Returns&nbsp;a&nbsp;Player&nbsp;or&nbsp;list&nbsp;of&nbsp;Players&nbsp;with&nbsp;the&nbsp;highest&nbsp;hand.</tt></dd></dl>
+
+<dl><dt><a name="Game-endRound"><strong>endRound</strong></a>(self, winner_queue: queue.Queue)</dt><dd><tt>Determines&nbsp;the&nbsp;round&nbsp;winner&nbsp;and&nbsp;puts&nbsp;them&nbsp;in&nbsp;winner_queue.<br>
+Splits&nbsp;the&nbsp;pot(s).<br>
+Removes&nbsp;players&nbsp;who&nbsp;were&nbsp;busted&nbsp;out&nbsp;from&nbsp;the&nbsp;game.</tt></dd></dl>
+
+<dl><dt><a name="Game-getBigBlind"><strong>getBigBlind</strong></a>(self) -&gt; Poker.player.Player</dt></dl>
+
+<dl><dt><a name="Game-getBlindMultiplier"><strong>getBlindMultiplier</strong></a>(self) -&gt; int</dt><dd><tt>Returns&nbsp;the&nbsp;current&nbsp;blind&nbsp;multiplier.</tt></dd></dl>
+
+<dl><dt><a name="Game-getCardFromDeck"><strong>getCardFromDeck</strong></a>(self) -&gt; Poker.card.Card</dt><dd><tt>Removes&nbsp;a&nbsp;card&nbsp;from&nbsp;the&nbsp;top&nbsp;of&nbsp;the&nbsp;deck&nbsp;and&nbsp;returns&nbsp;it.&nbsp;Adds&nbsp;stack&nbsp;to&nbsp;deck&nbsp;and&nbsp;shuffles&nbsp;if&nbsp;neccesary.</tt></dd></dl>
+
+<dl><dt><a name="Game-getOptionsFor"><strong>getOptionsFor</strong></a>(self, player: Poker.player.Player) -&gt; List[str]</dt><dd><tt>Takes&nbsp;a&nbsp;Player&nbsp;<a href="builtins.html#object">object</a>&nbsp;and&nbsp;returns&nbsp;a&nbsp;list&nbsp;of&nbsp;available&nbsp;options&nbsp;for&nbsp;it&nbsp;as&nbsp;strings.</tt></dd></dl>
+
+<dl><dt><a name="Game-getPlayers"><strong>getPlayers</strong></a>(self) -&gt; List[Poker.player.Player]</dt><dd><tt>Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;players&nbsp;in&nbsp;the&nbsp;game.</tt></dd></dl>
+
+<dl><dt><a name="Game-getPots"><strong>getPots</strong></a>(self) -&gt; List</dt><dd><tt>Returns&nbsp;list&nbsp;of&nbsp;pots&nbsp;in&nbsp;the&nbsp;current&nbsp;round.</tt></dd></dl>
+
+<dl><dt><a name="Game-getSmallBlind"><strong>getSmallBlind</strong></a>(self) -&gt; Poker.player.Player</dt></dl>
+
+<dl><dt><a name="Game-getTable"><strong>getTable</strong></a>(self) -&gt; List[Poker.card.Card]</dt><dd><tt>Returns&nbsp;list&nbsp;of&nbsp;cards&nbsp;currently&nbsp;on&nbsp;the&nbsp;table.</tt></dd></dl>
+
+<dl><dt><a name="Game-isCorrectBetAmount"><strong>isCorrectBetAmount</strong></a>(self) -&gt; bool</dt><dd><tt>Checks&nbsp;whether&nbsp;all&nbsp;players&nbsp;bet&nbsp;the&nbsp;same&nbsp;amount&nbsp;or&nbsp;have&nbsp;gone&nbsp;all&nbsp;in&nbsp;in&nbsp;the&nbsp;current&nbsp;round&nbsp;of&nbsp;betting.</tt></dd></dl>
+
+<dl><dt><a name="Game-newRound"><strong>newRound</strong></a>(self) -&gt; None</dt><dd><tt>New&nbsp;round&nbsp;of&nbsp;game.&nbsp;Reshuffles&nbsp;players'&nbsp;cards&nbsp;and&nbsp;moves&nbsp;the&nbsp;blind&nbsp;markers.</tt></dd></dl>
+
+<dl><dt><a name="Game-playGame"><strong>playGame</strong></a>(self, game_waiting_event: threading.Event, game_continue_event: threading.Event, current_player_queue: queue.Queue, winner_queue: queue.Queue) -&gt; None</dt><dd><tt>Represents&nbsp;the&nbsp;process&nbsp;of&nbsp;the&nbsp;Poker&nbsp;game.&nbsp;<br>
+game_waiting_event&nbsp;is&nbsp;set&nbsp;when&nbsp;the&nbsp;process&nbsp;is&nbsp;waiting&nbsp;for&nbsp;response.&nbsp;<br>
+game_continue_event&nbsp;must&nbsp;be&nbsp;set&nbsp;for&nbsp;the&nbsp;process&nbsp;to&nbsp;continue.<br>
+current_player_queue&nbsp;is&nbsp;the&nbsp;queue&nbsp;where&nbsp;the&nbsp;player&nbsp;whose&nbsp;turn&nbsp;it&nbsp;is&nbsp;is&nbsp;put.<br>
+winner_queue&nbsp;is&nbsp;the&nbsp;queue&nbsp;where&nbsp;the&nbsp;round&nbsp;winner(s)&nbsp;are&nbsp;put</tt></dd></dl>
+
+<dl><dt><a name="Game-resetAlreadyRaised"><strong>resetAlreadyRaised</strong></a>(self) -&gt; None</dt></dl>
+
+<dl><dt><a name="Game-resetCurrentBets"><strong>resetCurrentBets</strong></a>(self) -&gt; None</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>List</strong> = typing.List<br>
+<strong>Union</strong> = typing.Union</td></tr></table>
+</body></html>

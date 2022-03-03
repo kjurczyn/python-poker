@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module player</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>player</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/Poker/21z-pipr-poker/Poker/player.py">/home/Poker/21z-pipr-poker/Poker/player.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="player.html#Player">Player</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Player">class <strong>Player</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Player">Player</a>(name:&nbsp;str,&nbsp;money:&nbsp;int&nbsp;=&nbsp;10000)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+Represents&nbsp;a&nbsp;player&nbsp;in&nbsp;the&nbsp;game.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Player-__init__"><strong>__init__</strong></a>(self, name: str, money: int = 10000) -&gt; None</dt><dd><tt>Takes&nbsp;player&nbsp;name&nbsp;and&nbsp;optional&nbsp;starting&nbsp;money,&nbsp;default&nbsp;is&nbsp;1000.</tt></dd></dl>
+
+<dl><dt><a name="Player-__repr__"><strong>__repr__</strong></a>(self) -&gt; str</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="Player-__str__"><strong>__str__</strong></a>(self) -&gt; str</dt><dd><tt>Return&nbsp;str(self).</tt></dd></dl>
+
+<dl><dt><a name="Player-addMoney"><strong>addMoney</strong></a>(self, amount: int) -&gt; None</dt></dl>
+
+<dl><dt><a name="Player-addToHand"><strong>addToHand</strong></a>(self, card: 'Card') -&gt; None</dt></dl>
+
+<dl><dt><a name="Player-getAllIn"><strong>getAllIn</strong></a>(self) -&gt; bool</dt></dl>
+
+<dl><dt><a name="Player-getAlreadyRaised"><strong>getAlreadyRaised</strong></a>(self) -&gt; bool</dt></dl>
+
+<dl><dt><a name="Player-getBlind"><strong>getBlind</strong></a>(self) -&gt; int</dt></dl>
+
+<dl><dt><a name="Player-getCurrentBet"><strong>getCurrentBet</strong></a>(self) -&gt; int</dt></dl>
+
+<dl><dt><a name="Player-getCurrentPot"><strong>getCurrentPot</strong></a>(self) -&gt; int</dt></dl>
+
+<dl><dt><a name="Player-getHand"><strong>getHand</strong></a>(self) -&gt; List[Poker.card.Card]</dt></dl>
+
+<dl><dt><a name="Player-getMoney"><strong>getMoney</strong></a>(self) -&gt; int</dt></dl>
+
+<dl><dt><a name="Player-getName"><strong>getName</strong></a>(self) -&gt; str</dt></dl>
+
+<dl><dt><a name="Player-incrementPot"><strong>incrementPot</strong></a>(self) -&gt; None</dt></dl>
+
+<dl><dt><a name="Player-isPass"><strong>isPass</strong></a>(self) -&gt; bool</dt></dl>
+
+<dl><dt><a name="Player-passRound"><strong>passRound</strong></a>(self) -&gt; None</dt></dl>
+
+<dl><dt><a name="Player-reserCurrentBet"><strong>reserCurrentBet</strong></a>(self) -&gt; None</dt></dl>
+
+<dl><dt><a name="Player-reset"><strong>reset</strong></a>(self) -&gt; None</dt><dd><tt>Resets&nbsp;some&nbsp;variables&nbsp;to&nbsp;default&nbsp;values.&nbsp;Meant&nbsp;for&nbsp;use&nbsp;after&nbsp;round&nbsp;end.<br>
+Resets:&nbsp;_pass,&nbsp;_all_in,&nbsp;_current_bet,&nbsp;_current_pot,&nbsp;_already_raised</tt></dd></dl>
+
+<dl><dt><a name="Player-resetAlreadyRaised"><strong>resetAlreadyRaised</strong></a>(self) -&gt; None</dt></dl>
+
+<dl><dt><a name="Player-resetHand"><strong>resetHand</strong></a>(self) -&gt; List[Poker.card.Card]</dt><dd><tt>Clears&nbsp;the&nbsp;player's&nbsp;hand&nbsp;and&nbsp;returns&nbsp;its&nbsp;contents.</tt></dd></dl>
+
+<dl><dt><a name="Player-setAllIn"><strong>setAllIn</strong></a>(self) -&gt; None</dt></dl>
+
+<dl><dt><a name="Player-setBlind"><strong>setBlind</strong></a>(self, blind: int) -&gt; None</dt></dl>
+
+<dl><dt><a name="Player-setCurrentBet"><strong>setCurrentBet</strong></a>(self, amount: int) -&gt; None</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>Callable</strong> = typing.Callable<br>
+<strong>List</strong> = typing.List<br>
+</table>
+</body></html>
